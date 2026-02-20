@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Guardian | Next-Gen Personal Safety</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                            950: '#172554',
+                        },
+                        dark: {
+                            800: '#111827',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #020617;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .feature-icon-wrapper {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(30, 58, 138, 0.2) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: radial-gradient(circle at top right, #1e3a8a 0%, #020617 40%),
+                        radial-gradient(circle at bottom left, #312e81 0%, #020617 40%);
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-500 selection:text-white gradient-bg min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card border-b-0 border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-brand-500/30">
+                        <i class="fa-solid fa-shield-halved text-white text-xl"></i>
+                    </div>
+                    <span class="font-heading font-bold text-2xl tracking-tight">Silent<span class="text-brand-400">Guardian</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#features" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Features</a>
+                    <a href="#architecture" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Architecture</a>
+                    <a href="#tech-stack" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Tech Stack</a>
+                    <a href="#developer" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Developers</a>
+                    <div class="flex items-center gap-3 border-l border-white/10 pl-6 ml-2">
+                        <a href="#" class="bg-emerald-500 hover:bg-emerald-400 text-white px-5 py-2.5 rounded-full transition-all text-sm font-medium flex items-center gap-2 shadow-lg shadow-emerald-500/20">
+                            <i class="fa-brands fa-android text-lg"></i> Download APK
+                        </a>
+                        <a href="https://github.com/g1rao/SilentGuardian" target="_blank" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-5 py-2.5 rounded-full transition-all text-sm font-medium flex items-center gap-2">
+                            <i class="fa-brands fa-github text-lg"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-brand-500/30 text-brand-300 text-sm font-medium mb-8">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                </span>
+                Built with Flutter for Android & iOS
+            </div>
+            <h1 class="font-heading text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                Your Predictive, <br class="hidden md:block" /> Context-Aware <span class="gradient-text">Safety Engine.</span>
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+                A next-gen personal safety and anti-theft system designed to protect you, your loved ones, and your device with intelligent, automated escalation.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap">
+                <a href="#" class="bg-gradient-to-r from-emerald-500 to-emerald-400 hover:from-emerald-400 hover:to-emerald-300 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg shadow-emerald-500/25 flex items-center gap-2 text-lg">
+                    <i class="fa-brands fa-android text-xl"></i> Download APK
+                </a>
+                <a href="#features" class="bg-brand-600 hover:bg-brand-500 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg shadow-brand-500/25 flex items-center gap-2 text-lg">
+                    Explore Features <i class="fa-solid fa-arrow-down ml-1"></i>
+                </a>
+                <a href="#developer" class="glass-card hover:bg-white/10 text-white px-8 py-4 rounded-full font-medium transition-all flex items-center gap-2 text-lg">
+                    <i class="fa-solid fa-code"></i> Developer Setup
+                </a>
+            </div>
+        </div>
+        
+        <!-- Background decorative elements -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-600/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+    </section>
+
+    <!-- Core Features Grid -->
+    <section id="features" class="py-20 relative border-t border-white/5 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Comprehensive <span class="text-brand-400">Protection</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">Every feature is engineered to provide maximum security while respecting your privacy and context.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Security & Auth -->
+                <div class="glass-card rounded-2xl p-8 hover:-translate-y-1 transition-transform duration-300 group">
+                    <div class="w-14 h-14 rounded-xl feature-icon-wrapper flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-fingerprint text-brand-400 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-4 text-white">Security & Authentication</h3>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-500 mt-1"></i> <div><strong class="text-white">Google Sign-In:</strong> Seamless & secure account access.</div></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-500 mt-1"></i> <div><strong class="text-white">Biometric & PIN:</strong> App Lock with Fingerprint/Face ID.</div></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-500 mt-1"></i> <div><strong class="text-white">Emergency Codes:</strong> Tri-state PINs (Green: Cancel, Yellow: Alert, Red: SOS) for duress situations.</div></li>
+                    </ul>
+                </div>
+
+                <!-- Smart Safety Engine -->
+                <div class="glass-card rounded-2xl p-8 hover:-translate-y-1 transition-transform duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bolt text-red-400 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-4 text-white">Smart Safety Engine</h3>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-red-400 mt-1"></i> <div><strong class="text-white">4-Stage Escalation:</strong> Auto-progresses: Check-in &rarr; GPS &rarr; Call Contacts &rarr; Dial 112.</div></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-red-400 mt-1"></i> <div><strong class="text-white">Shake to SOS:</strong> Instantly trigger emergency mode.</div></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-red-400 mt-1"></i> <div><strong class="text-white">Fake Call:</strong> Simulate incoming calls to safely exit uncomfortable situations.</div></li>
+                    </ul>
+                </div>
+
+                <!-- Location & Navigation -->
+                <div class="glass-card rounded-2xl p-8 hover:-translate-y-1 transition-transform duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-map-location-dot text-emerald-400 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-4 text-white">Location & Navigation</h3>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <div><strong class="text-white">Live Sharing:</strong> Real-time 30s interval updates to trusted contacts.</div></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <div><strong class="text-white">Route Monitoring:</strong> Safe Walk mode alerts upon path deviation or entering Risk Zones.</div></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <div><strong class="text-white">Reverse Timer:</strong> "I'll arrive in X minutes" automated safety countdowns.</div></li>
+                    </ul>
+                </div>
+
+                <!-- Anti-Theft Protection -->
+                <div class="glass-card rounded-2xl p-8 hover:-translate-y-1 transition-transform duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-user-ninja text-amber-400 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-4 text-white">Anti-Theft Protection</h3>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-amber-400 mt-1"></i> <div><strong class="text-white">Intruder Capture:</strong> Auto-snaps front camera photo on wrong PIN.</div></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-amber-400 mt-1"></i> <div><strong class="text-white">Hardware Monitoring:</strong> SIM change detection & stealth mode execution.</div></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-amber-400 mt-1"></i> <div><strong class="text-white">Theft Deterrents:</strong> Fake blank screen, warning overlays, and loud alarms.</div></li>
+                    </ul>
+                </div>
+
+                <!-- Cloud Sync & Backup -->
+                <div class="glass-card rounded-2xl p-8 hover:-translate-y-1 transition-transform duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-cloud-arrow-up text-cyan-400 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-4 text-white">Cloud Sync & Backup</h3>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> <div><strong class="text-white">Firebase Auto-Sync:</strong> Debounced & throttled backups of all your settings.</div></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> <div><strong class="text-white">Cross-Device Restore:</strong> Seamless data restoration when logging into a new device.</div></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> <div><strong class="text-white">Granular Controls:</strong> Choose exactly what to sync (contacts, zones, settings).</div></li>
+                    </ul>
+                </div>
+
+                <!-- Evidence & Social -->
+                <div class="glass-card rounded-2xl p-8 hover:-translate-y-1 transition-transform duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-file-shield text-purple-400 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-4 text-white">Evidence & Social</h3>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-purple-400 mt-1"></i> <div><strong class="text-white">Encrypted Vault:</strong> Secure local storage of safety events & GPS trails.</div></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-purple-400 mt-1"></i> <div><strong class="text-white">Report Generation:</strong> Export timestamped evidence as structured PDFs.</div></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-purple-400 mt-1"></i> <div><strong class="text-white">Family Mapping:</strong> View family locations & organize emergency contact groups.</div></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture & Privacy -->
+    <section id="architecture" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <!-- Privacy Card -->
+                <div class="glass-card rounded-3xl p-10 relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 text-9xl text-white/5"><i class="fa-solid fa-lock"></i></div>
+                    <div class="relative z-10">
+                        <h2 class="font-heading text-3xl font-bold mb-6 flex items-center gap-3">
+                            <i class="fa-solid fa-shield-check text-green-400"></i> Privacy by Design
+                        </h2>
+                        <div class="space-y-4 text-slate-300 text-lg">
+                            <p><strong>No hidden surveillance.</strong> We prioritize your consent for all tracking features.</p>
+                            <p><strong>Encrypted Local Storage.</strong> Your evidence vault is securely locked on your device.</p>
+                            <p><strong>Opt-In Sharing.</strong> All location sharing is entirely user-controlled and transparent.</p>
+                            <p><strong>Granular Sync.</strong> Cloud data is only synced when signed in, giving you control over what leaves your device.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Architecture Card -->
+                <div class="glass-card rounded-3xl p-10 relative overflow-hidden border-brand-500/20">
+                    <div class="absolute -right-10 -bottom-10 text-9xl text-brand-500/5"><i class="fa-solid fa-sitemap"></i></div>
+                    <div class="relative z-10">
+                        <h2 class="font-heading text-3xl font-bold mb-6 flex items-center gap-3">
+                            <i class="fa-solid fa-microchip text-brand-400"></i> Robust Architecture
+                        </h2>
+                        <ul class="space-y-6">
+                            <li>
+                                <h4 class="text-xl font-bold text-white mb-1">Offline-First Capabilities</h4>
+                                <p class="text-slate-400">Core safety functionalities execute seamlessly without internet using Hive local storage.</p>
+                            </li>
+                            <li>
+                                <h4 class="text-xl font-bold text-white mb-1">Provider Pattern</h4>
+                                <p class="text-slate-400">Clean, scalable state management ensuring snappy, reactive UI updates across the app.</p>
+                            </li>
+                            <li>
+                                <h4 class="text-xl font-bold text-white mb-1">Native Platform Channels</h4>
+                                <p class="text-slate-400">Custom Kotlin (Android) & Swift (iOS) implementations for deep hardware integration like SIM monitoring.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section id="tech-stack" class="py-20 bg-slate-900/50 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-12">Powered by Modern Technology</h2>
+            
+            <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                <span class="px-6 py-3 rounded-full glass-card flex items-center gap-2 font-medium text-slate-200">
+                    <i class="fa-brands fa-flutter text-[#54C5F8] text-xl"></i> Flutter (Dart)
+                </span>
+                <span class="px-6 py-3 rounded-full glass-card flex items-center gap-2 font-medium text-slate-200">
+                    <i class="fa-brands fa-google text-[#FFCA28] text-xl"></i> Firebase Auth
+                </span>
+                <span class="px-6 py-3 rounded-full glass-card flex items-center gap-2 font-medium text-slate-200">
+                    <i class="fa-solid fa-database text-brand-400 text-xl"></i> Cloud Firestore
+                </span>
+                <span class="px-6 py-3 rounded-full glass-card flex items-center gap-2 font-medium text-slate-200">
+                    <i class="fa-solid fa-box-archive text-purple-400 text-xl"></i> Hive Local DB
+                </span>
+                <span class="px-6 py-3 rounded-full glass-card flex items-center gap-2 font-medium text-slate-200">
+                    <i class="fa-solid fa-map text-emerald-400 text-xl"></i> Google Maps API
+                </span>
+                <span class="px-6 py-3 rounded-full glass-card flex items-center gap-2 font-medium text-slate-200">
+                    <i class="fa-brands fa-android text-[#3DDC84] text-xl"></i> Kotlin (Native)
+                </span>
+                <span class="px-6 py-3 rounded-full glass-card flex items-center gap-2 font-medium text-slate-200">
+                    <i class="fa-brands fa-apple text-white text-xl"></i> Swift (Native)
+                </span>
+                <span class="px-6 py-3 rounded-full glass-card flex items-center gap-2 font-medium text-slate-200">
+                    <i class="fa-solid fa-camera text-slate-400 text-xl"></i> Camera Package
+                </span>
+            </div>
+            
+            <p class="mt-12 text-slate-400 max-w-2xl mx-auto">
+                Features full support for Android 13+ Predictive Back Gestures, Light/Dark/System theming, and offline-first capabilities.
+            </p>
+        </div>
+    </section>
+
+    <!-- Getting Started / Developer Setup -->
+    <section id="developer" class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Developer Setup</h2>
+                <p class="text-slate-400 text-lg">Prerequisites: Flutter SDK ≥ 3.x, Dart ≥ 3.x, and Firebase configurations.</p>
+            </div>
+
+            <div class="bg-dark-950 rounded-2xl border border-slate-800 shadow-2xl overflow-hidden">
+                <!-- Terminal Header -->
+                <div class="bg-slate-900 px-4 py-3 flex items-center border-b border-slate-800">
+                    <div class="flex space-x-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <div class="mx-auto text-xs text-slate-400 font-mono">bash</div>
+                </div>
+                <!-- Terminal Body -->
+                <div class="p-6 font-mono text-sm overflow-x-auto text-slate-300">
+<pre><code><span class="text-slate-500"># Clone the repository</span>
+<span class="text-green-400">git</span> clone https://github.com/g1rao/SilentGuardian.git
+<span class="text-brand-400">cd</span> SilentGuardian
+
+<span class="text-slate-500"># Install dependencies</span>
+<span class="text-green-400">flutter</span> pub get
+
+<span class="text-slate-500"># Run on Android</span>
+<span class="text-green-400">flutter</span> run
+
+<span class="text-slate-500"># Run on iOS</span>
+<span class="text-brand-400">cd</span> ios && <span class="text-green-400">pod</span> install && <span class="text-brand-400">cd</span> ..
+<span class="text-green-400">flutter</span> run -d ios
+</code></pre>
+                </div>
+            </div>
+
+            <div class="mt-10 glass-card p-8 rounded-2xl">
+                <h3 class="font-heading text-xl font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-fire text-orange-500"></i> Firebase Integration Steps</h3>
+                <ol class="list-decimal list-inside space-y-3 text-slate-300">
+                    <li>Create a Firebase project at <a href="https://console.firebase.google.com" target="_blank" class="text-brand-400 hover:underline">console.firebase.google.com</a></li>
+                    <li>Add Android app with package: <code class="bg-black/30 px-2 py-1 rounded text-sm font-mono text-brand-300">com.silentguardian.silent_guardian</code></li>
+                    <li>Add iOS app with bundle ID: <code class="bg-black/30 px-2 py-1 rounded text-sm font-mono text-brand-300">com.silentguardian.silentGuardian</code></li>
+                    <li>Download configs: <code class="text-emerald-400 text-sm">google-services.json</code> &rarr; <code class="text-slate-400 text-sm">android/app/</code> | <code class="text-emerald-400 text-sm">GoogleService-Info.plist</code> &rarr; <code class="text-slate-400 text-sm">ios/Runner/</code></li>
+                    <li>Enable <strong>Google Sign-In</strong> in Authentication &rarr; Sign-in method</li>
+                    <li>Create <strong>Firestore Database</strong> in test mode and enable <strong>Firebase Storage</strong></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-slate-900/80 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center">
+                        <i class="fa-solid fa-shield-halved text-white text-sm"></i>
+                    </div>
+                    <span class="font-heading font-bold text-xl">Silent<span class="text-brand-400">Guardian</span></span>
+                </div>
+                
+                <div class="flex gap-6">
+                    <a href="https://github.com/g1rao/SilentGuardian" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+                        <i class="fa-brands fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                        <i class="fa-solid fa-envelope text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
+                <p>Licensed under the <span class="text-slate-300 font-medium">MIT License</span>. Contributions welcome!</p>
+                <p>Built with <i class="fa-solid fa-heart text-red-500 mx-1"></i> for personal safety by <a href="https://github.com/g1rao" target="_blank" class="text-brand-400 hover:underline font-medium">Jeevan Rao</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Navbar effect on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('bg-slate-900/90', 'shadow-lg');
+                nav.classList.remove('border-b-0');
+            } else {
+                nav.classList.remove('bg-slate-900/90', 'shadow-lg');
+                nav.classList.add('border-b-0');
+            }
+        });
+    </script>
+</body>
+</html>
